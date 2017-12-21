@@ -1,5 +1,5 @@
-resource "aws_elb" "my-elb" {
-  name = "my-elb"
+resource "aws_elb" "public-elb" {
+  name = "public-elb"
   subnets = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
   security_groups = ["${aws_security_group.elb-sg.id}"]
 
@@ -22,7 +22,7 @@ resource "aws_elb" "my-elb" {
   connection_draining = true
   connection_draining_timeout = 400
   tags {
-    Name = "my-elb"
+    Name = "public-elb"
   }
 }
 

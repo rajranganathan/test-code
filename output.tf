@@ -1,5 +1,5 @@
 output "ELB:" {
-	value = "${aws_elb.my-elb.dns_name}"
+	value = "${aws_elb.hsb-elb.dns_name}"
 }
 
 output "BASTION:" {
